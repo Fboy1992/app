@@ -22,16 +22,30 @@
 
 	//定义Student构造器
 	function Student(firstName, subject) {
-		//调用父类狗仔妻
+		//调用父类构造器
 		Person.call(this, firstName)
 
 		//出事化特有特性
 		this.subject = subject
 	}
 
+	
+	//设置了原型继承关系
+	Student.prototype = Object.create(Person.prototype)
+	//Student.__prop__ = Person.prototype
+	//设置constructor 属性指向 Student
+	Student.prototype.constructor = Student
+
 	var a = new Student('aizsfgk', 'php')
+
+
 	console.log(a.firstName)
 	console.log(a.subject)
+	console.log(a)
+	a.walk()
+	a.sayHello()
+	console.log(a instanceof Person)
+	console.log(a instanceof Student)
 	</script>
 </body>
 </html>
