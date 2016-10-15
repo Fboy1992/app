@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>中级内容</title>
+</head>
+<body>
+	<h3>js_中级内容</h3>
+	<script>
+	//相等
+	/*
+		严格： ===
+		非严格 ==
+		Object.js  (es6)
+
+
+	*/
+
+	//用包模拟私有方法
+	var Counter = (function() {
+		var privateCounter = 0
+		function changeBy(val) {
+			privateCounter += val
+		}
+
+		return {
+			increment: function() {
+				changeBy(1)
+			},
+			decrement: function() {
+				changeBy(-1)
+			},
+			value: function() {
+				return privateCounter
+			}
+		}
+	})()
+
+	console.log(Counter.value()) //0
+	Counter.increment()  //1
+	Counter.increment()  //2
+
+	console.log(Counter.value()) //2
+	Counter.decrement()//1
+	console.log(Counter.value())//1
+	</script>
+</body>
+</html>
