@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>面向对象测试</title>
+</head>
+<body>
+	<h3>面向对象测试</h3>
+	<script>
+	//定义Person构造器
+	function Person(firstName) {
+		this.firstName = firstName
+	}
+
+	Person.prototype.walk = function() {
+		alert('i am walking')
+	}
+
+	Person.prototype.sayHello = function() {
+		alert('hello, i\'m ' + this.firstName)
+	}
+
+	//定义Student构造器
+	function Student(firstName, subject) {
+		//调用父类狗仔妻
+		Person.call(this, firstName)
+
+		//出事化特有特性
+		this.subject = subject
+	}
+
+	var a = new Student('aizsfgk', 'php')
+	console.log(a.firstName)
+	console.log(a.subject)
+	</script>
+</body>
+</html>
