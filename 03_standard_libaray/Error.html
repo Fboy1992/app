@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Error对象</title>
+</head>
+<body>
+	<h4>Error对象</h4>
+<script>
+	/*
+		new Error([message[, fileName[, lineNumbers]]])
+
+		7种error类型
+
+		EvelError
+		InternalError
+		RangeError
+
+		ReferenceError
+		SyntaxError
+		TypeError
+		URIError
+
+	*/
+	try {
+	  throw new Error("Whoops!")
+	} catch (e) {
+	  alert(e.name + " : " + e.message)
+	}
+</script>
+</body>
+</html>
