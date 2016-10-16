@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>vue-test2</title>
+	<script src="../vender/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<ul>
+			<li v-for="todo in todos">
+				{{ todo.text }}
+			</li>
+		</ul>
+	</div>
+	<script>
+	//渲染列表
+	new Vue({
+		el:'#app',
+		data:{
+			todos: [
+				{text:'learn javascript'},
+				{text:'learn vue-js'},
+				{text:'build something awesome'}
+			]
+		}
+	})
+	</script>
+</body>
+</html>
