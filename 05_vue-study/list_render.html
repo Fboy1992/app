@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>列表渲染</title>
+	<script src="../vender/vue.js"></script>
+</head>
+<body>
+	<div id="list_r">
+		<ul>
+			<li v-for="item in items">
+				$${item.msg}$$
+			</li>
+		</ul>
+	</div>
+<script>
+Vue.config.delimiters = ['$${', '}$$'] //修改模板标签
+//列表渲染
+var vm = new Vue({
+	el: '#list_r',
+	data: {
+		items: [
+			{ msg: 'text1'},
+			{ msg: 'text2'},
+			{ msg: 'text3'},
+			{ msg: 'text4'}
+		]
+	}
+})
+//v-for 块内我们能完全访问父组件作用域内的属性
+//
+//数组变动检测
+//
+//
+//trace-by
+//
+//对象遍历和预值遍历，都是可以的
+//
+</script>
+</body>
+</html>

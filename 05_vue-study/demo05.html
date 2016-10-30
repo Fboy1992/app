@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>实例生命周期</title>
+	<script src="../vender/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		
+	</div>
+<script>
+	var data = { a: 1 }
+	var vm = new Vue({
+		el: '#app',
+		data: data
+	})
+
+	//vue.js 有一些钩子，在实例的生命周期的不同阶段用，没有控制器的概念
+	//
+	//过滤器
+	//
+	//指令：特殊的带有前缀(v-)的特性
+	// v-if 判断 
+	// v-bind  将元素的属性和表达式绑定
+	// v-on   监听DOM事件
+	// 参数用  :分割
+	// 修饰符  .
+	// 
+	// v-bind:herf="url"    :herf="url"
+	// v-on:click="doSomething"  @click="doSomething"
+</script>
+</body>
+</html>

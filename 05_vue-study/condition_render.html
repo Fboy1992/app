@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>条件渲染</title>
+	<script src="../vender/vue.js"></script>
+</head>
+<body>
+	<div id="condition_render">
+		<!-- <h1 v-if="OK">YES</h1>
+		<h1 v-else>NO</h1> -->
+		<template v-if="OK">
+			<h1>title</h1>
+			<p>i like you</p>
+			<p>you like me</p>
+		</template>
+	</div>
+<script>
+//条件渲染
+// 在字符串模板中
+var vm = new Vue({
+	el: '#condition_render',
+	data: {
+		OK: true
+	}
+})
+</script>
+</body>
+</html>

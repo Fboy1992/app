@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>方法与事件处理器</title>
+	<script src="../vender/vue.js"></script>
+</head>
+<body>
+	<div id="m_event">
+		<button v-on:click="greet">点击</button>
+	</div>
+<script>
+//方法与事件处理器
+var vm = new Vue({
+	el: '#m_event',
+	data: {
+		name: 'Vue-js'
+	},
+	methods: {
+		greet: function(e) {
+			alert('hello ' + this.name + '!')
+			alert(e.target.tagName)
+		}
+	}
+})
+</script>
+</body>
+</html>

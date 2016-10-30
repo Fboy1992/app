@@ -2,42 +2,33 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>综合</title>
+	<title>vue-js_test</title>
 	<script src="../vender/vue.js"></script>
 </head>
 <body>
+	<!-- vue.js的 -->
 	<div id="app">
-		<input v-model="newTodo" v-on:keyup.enter="addTodo">
-		<ul>
-		<li v-for="todo in todos">
-			<span>{{ todo.text }}</span>
-			<button v-on:click="removeTodo($index)">X</button>
-		</li>
-		</ul>
+		<app-nav></app-nav>
+		<app-view>
+		<app-sidebar></app-siderbar>
+		<app-content></app-content>
+		</app-view>
 	</div>
-	
+<script>
+/*
+	简介：构建数据驱动的web界面库(MVVM)
+	目标：相应的数据绑定
+		  组合的视图组件
+	只聚焦于视图层
 
-	<script>
-	new Vue({
-		el:'#app',
-		data: {
-			newTodo:'',
-			todos:[
-				{ text:'text1' },
-			]
-		},
-		methods: {
-			addTodo: function() {
-				var t = this.newTodo.trim()
-				if (t) {
-					this.todos.push({text: t})
-				}
-			},
-			removeTodo: function(index) {
-				this.todos.splice(index,1)
-			}
-		}
-	})
-	</script>
+	组件系统：独立可复用的小组件来构建大型应用
+		组件树：
+		Vue.js 组件其实都是被扩展的 Vue 实例。
+ */
+var data = { a: 1 }
+var vm = new Vue({
+	data: data
+})
+</script>
 </body>
 </html>

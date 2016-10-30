@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>class和style绑定</title>
+	<script src="../vender/vue.js"></script>
+</head>
+<body>
+	<!-- <div id="app">
+		<p class="class_1" v-bind:class="classObject"></p>
+	</div> -->
+	<div id="style_bind">
+		<div v-bind:style="s_obj">
+			{{ msg }}
+		</div>
+	</div>
+<script>
+//操作class 和样式列表
+//表达式的结果类型除了字符串之外，还可以是对象或数组。
+/*var vm = new Vue({
+	el: '#app',
+	data: {
+		classObject: {
+			'class_a':true,
+			'class_b':false
+		}
+	}
+})*/
+var vm = new Vue({
+	el: '#style_bind',
+	data: {
+		msg: 'hello-world',
+		s_obj: {
+			color: 'red',
+			border: '1px solid green',
+			fontSize: '24px',
+			height: '30px',
+			width: '200px'
+		}
+	}
+})
+</script>
+</body>
+</html>
